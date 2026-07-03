@@ -1,0 +1,6 @@
+///gravity change
+if(global.grav=1){
+global.image_xscale=image_xscale
+instance_create(x,y-4,player2)
+instance_destroy()
+}

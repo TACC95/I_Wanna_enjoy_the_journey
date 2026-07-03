@@ -1,0 +1,40 @@
+///player muki
+if(global.pause) exit;
+if(global.swap) exit;
+if(global.shift) exit;
+if(global.freeze2) exit;
+
+
+player_dir=point_direction(previousX,previousY,x,y);
+if(player_dir=0 && image_xscale=-1){
+    player_dir+=180
+    }
+
+previousX=xprevious;
+previousY=yprevious;
+
+///player_muki 1/2
+if(nnnn=0){
+if(global.player_muki=0){
+    image_xscale=1;
+    }
+else if(global.player_muki=1){
+    image_xscale=-1;
+    }
+nnnn=1;
+}
+//player_muki 2/2
+if(image_xscale=1){
+    global.player_muki=0
+    }
+else if(image_xscale=-1){
+    global.player_muki=1
+    }
+
+//tyakuti
+if(vspeed=0 && place_meeting(x,y+16,block)=true || place_meeting(x,y+16,myplatform)=true){
+    tyakuti=1;
+    }
+else{
+    tyakuti=0;
+}

@@ -1,0 +1,62 @@
+///collision block
+/*
+player mask range
+     11
+   5   5
+     8
+*/
+/*
+        vtype=1
+htype=2  player   htype=1
+        vtype=2
+*/
+//奻
+//if(collision_rectangle(x-4,y-12,x+4,y,block,false,false)){
+if(collision_rectangle(x-4,y-12+vspeed,x+4,y,block,false,false)){
+    collision_vtype=1;
+    }
+//狟
+else if(collision_rectangle(x-4,y-11,x+4,y+9,block,false,false)){
+    collision_vtype=2;
+    }
+else{
+    collision_vtype=0;
+    }
+//狟公及ㄡ
+if(collision_rectangle(x-4,y-11,x+4,y+15,block,false,false)){
+    collision_vtype2=2;
+    }
+else{
+    collision_vtype2=0;
+    }
+
+//衵
+if(collision_rectangle(x-5,y-11,x+6,y+8,block,false,false)){
+    collision_htype=1;
+    }
+//酘
+else if(collision_rectangle(x-6,y-11,x+5,y+8,block,false,false)){
+    collision_htype=2;
+    if(tuta=0){
+        hspeed+=1;
+        }
+    }
+else{
+    collision_htype=0;
+    }
+//酘公及ㄡ
+if(collision_rectangle(x-7,y-11,x+5,y+8,block,false,false)){
+    collision_htype2=2;
+    }
+else{
+    collision_htype2=0;
+    }
+
+//add 9/23
+
+//BUG!!! for platform
+if(collision_htype=1 && collision_vtype=1 && collision_htype2=2 && collision_vtype2=2){
+    if(!place_meeting(x,y,objSlope) &&!place_meeting(x,y,platform) &&!place_meeting(x,y,myplatform)){//add 2/19 add 3/1
+        instance_create(x,y,playerKiller);//sound_play(sndCherry);
+        }
+    }
