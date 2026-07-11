@@ -18,6 +18,12 @@ class Sprite(pygame.sprite.Sprite):
             }
             self.image.fill(colors.get(sprite_type, (200, 200, 200)))
 
+        # 生成像素级碰撞遮罩。
+        # 对于尖刺这类非矩形贴图，mask 能让碰撞只检测不透明像素，
+        # 避免玩家碰到刺的透明角落就被判死。
+        # solid/save/goal 用矩形 mask 即可，因为它们的碰撞框就是矩形。
+        self.mask = pygame.mask.from_surface(self.image)
+
     def draw(self, screen, camera_offset=(0, 0)):
         screen.blit(self.image, (self.rect.x - camera_offset[0],
                                  self.rect.y - camera_offset[1]))
