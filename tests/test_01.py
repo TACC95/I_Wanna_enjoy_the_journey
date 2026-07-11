@@ -1,14 +1,16 @@
 """
 第一测试—————玩家贴图测试
 """
-
 import sys
 import pygame
-from classes.player_kid import PlayerKid
+from classes import PlayerKid
+
+# 窗口尺寸常量（I Wanna yuuutu 引擎标准：800x608）
+SCREEN_W, SCREEN_H = 800, 608
 
 # Pygame 初始化
 pygame.init()
-screen = pygame.display.set_mode((800, 600))
+screen = pygame.display.set_mode((SCREEN_W, SCREEN_H))
 clock = pygame.time.Clock()
 pygame.display.set_caption("Test 01: 玩家贴图加载")
 
@@ -22,10 +24,9 @@ fps_timer = 0
 current_fps = 0
 
 # 创建玩家实例，初始位置居中
-player: PlayerKid = PlayerKid(400, 300)
+player: PlayerKid = PlayerKid(400, 304)
 
-# 窗口尺寸常量
-SCREEN_W, SCREEN_H = 800, 600
+
 
 # 空气墙厚度
 WALL_THICKNESS = 5
