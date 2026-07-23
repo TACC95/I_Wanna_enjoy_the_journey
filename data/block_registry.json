@@ -1,0 +1,59 @@
+{
+  "blocks": {
+    "0": {
+      "name": "air",
+      "type": "bg",
+      "file": null
+    },
+    "1": {
+      "name": "floor_1",
+      "type": "solid",
+      "file": "resources/sprite/blocks/floor_1.png"
+    },
+    "2": {
+      "name": "floor_2",
+      "type": "solid",
+      "file": "resources/sprite/blocks/floor_2.png"
+    },
+    "3": {
+      "name": "spike_down",
+      "type": "spike",
+      "file": "resources/sprite/enemies/spikes/spike_down.png"
+    },
+    "4": {
+      "name": "spike_up",
+      "type": "spike",
+      "file": "resources/sprite/enemies/spikes/spike_up.png"
+    },
+    "5": {
+      "name": "spike_left",
+      "type": "spike",
+      "file": "resources/sprite/enemies/spikes/spike_left.png"
+    },
+    "6": {
+      "name": "spike_right",
+      "type": "spike",
+      "file": "resources/sprite/enemies/spikes/spike_right.png"
+    },
+    "7": {
+      "name": "cherry_1",
+      "type": "spike",
+      "file": "resources/sprite/enemies/cherry/cherry_1.png"
+    },
+    "8": {
+      "name": "cherry_2",
+      "type": "spike",
+      "file": "resources/sprite/enemies/cherry/cherry_2.png"
+    },
+    "9": {
+      "name": "save_1",
+      "type": "save",
+      "file": "resources/sprite/save/save_1.png"
+    },
+    "10": {
+      "name": "save_2",
+      "type": "save",
+      "file": "resources/sprite/save/save_2.png"
+    }
+  }
+}

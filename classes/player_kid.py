@@ -68,10 +68,10 @@ class PlayerKid(pygame.sprite.Sprite):
 
         # 加载音效
         self.sfx = {
-            'jump': pygame.mixer.Sound('resources/the_kid/audio/Jump.wav'),
-            'djump': pygame.mixer.Sound('resources/the_kid/audio/Double Jump.wav'),
-            'shoot': pygame.mixer.Sound('resources/the_kid/audio/Shoot.wav'),
-            'death': pygame.mixer.Sound('resources/the_kid/audio/Death.wav'),
+            'jump': pygame.mixer.Sound('./resources/the_kid/audio/Jump.wav'),
+            'djump': pygame.mixer.Sound('./resources/the_kid/audio/Double Jump.wav'),
+            'shoot': pygame.mixer.Sound('./resources/the_kid/audio/Shoot.wav'),
+            'death': pygame.mixer.Sound('./resources/the_kid/audio/Death.wav'),
         }
 
         # 子弹
@@ -90,7 +90,7 @@ class PlayerKid(pygame.sprite.Sprite):
     def _load_game_over_image(self):
         """加载 GameOver 贴图，找不到则返回 None"""
         try:
-            return pygame.image.load('resources/sprite/ui/game_over/gameover.png').convert_alpha()
+            return pygame.image.load('./resources/sprite/ui/game_over/gameover.png').convert_alpha()
         except pygame.error:
             return None
 
@@ -120,13 +120,13 @@ class PlayerKid(pygame.sprite.Sprite):
                 return None
 
         self.death_images = {
-            'blood': _load('resources/sprite/effects/bloods/blood_1.png'),
-            'head': _load('resources/sprite/effects/body_parts/kid_head_1.png'),
-            'hand': _load('resources/sprite/effects/body_parts/kid_hand_2.png'),
-            'body': _load('resources/sprite/effects/body_parts/kid_body.png'),
-            'pants': _load('resources/sprite/effects/body_parts/kid_pants.png'),
-            'foot': _load('resources/sprite/effects/body_parts/kid_foot.png'),
-            'gun': _load('resources/sprite/effects/body_parts/kid_gun.png'),
+            'blood': _load('./resources/sprite/effects/bloods/blood_1.png'),
+            'head': _load('./resources/sprite/effects/body_parts/kid_head_1.png'),
+            'hand': _load('./resources/sprite/effects/body_parts/kid_hand_2.png'),
+            'body': _load('./resources/sprite/effects/body_parts/kid_body.png'),
+            'pants': _load('./resources/sprite/effects/body_parts/kid_pants.png'),
+            'foot': _load('./resources/sprite/effects/body_parts/kid_foot.png'),
+            'gun': _load('./resources/sprite/effects/body_parts/kid_gun.png'),
         }
 
     def jump(self):
